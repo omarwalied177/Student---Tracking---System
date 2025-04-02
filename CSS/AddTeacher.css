@@ -1,0 +1,76 @@
+/* Add Teacher Page Styles */
+.teacher-form {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 2rem;
+  }
+  
+  .teacher-image-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent-color);
+    background-color: #f8f9fa;
+  }
+  
+  .teacher-image-preview {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body.dark-theme .teacher-image-preview {
+    color: black;
+  }
+  
+  .section-title {
+    font-weight: 600;
+    color: var(--accent-color) !important;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 3px;
+  }
+  
+  /* Form validation styles */
+  .is-invalid {
+    border-color: var(--danger-color);
+  }
+  
+  .invalid-feedback {
+    color: var(--danger-color);
+    font-size: 0.85rem;
+    display: none;
+  }
+  
+  .is-invalid ~ .invalid-feedback {
+    display: block;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .teacher-form {
+      padding: 1.5rem;
+    }
+    
+    .teacher-image-container {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  

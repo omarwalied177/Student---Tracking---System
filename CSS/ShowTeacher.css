@@ -1,0 +1,104 @@
+/* Show Teacher Page Styles */
+.teacher-table-container {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .teacher-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .status-badge {
+    padding: 0.35rem 0.65rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .status-active {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success-color);
+  }
+  
+  .status-inactive {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger-color);
+  }
+  
+  .action-btn {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .view-btn {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .view-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .edit-btn {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--warning-color);
+  }
+  
+  .edit-btn:hover {
+    background-color: var(--warning-color);
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger-color);
+  }
+  
+  .delete-btn:hover {
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  /* Modal styles */
+  .teacher-detail-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    display: block;
+    border: 3px solid var(--accent-color);
+  }
+  
+  .detail-label {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .teacher-table-container {
+      padding: 1rem;
+    }
+    
+    .table-responsive {
+      overflow-x: auto;
+    }
+  }

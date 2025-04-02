@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Teacher Dashboard | Student Tracking System</title>
+    <link rel="icon" type="image/x-icon" href="../IMGs/favicon.ico" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/TeacherDashboard.css" />
+  </head>
+  <body>
+    <!-- Floating Particles Background -->
+    <div class="particles" id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a href="../Pages/login.html" class="navbar-brand text-white me-auto">
+          <i class="bi bi-box-arrow-left"></i>
+        </a>
+        
+        <div class="navbar-brand mx-auto position-absolute start-50 translate-middle-x">
+          <span class="h4 mb-0">Teacher Dashboard</span>
+          <span class="badge bg-warning text-dark ms-2">Teacher</span>
+        </div>
+        
+        <div class="ms-auto d-flex align-items-center">
+          <div class="notification-bell me-3 position-relative">
+            <i class="bi bi-bell-fill text-white fs-5"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              2
+            </span>
+          </div>
+          <a href="#" class="text-white me-3" id="theme-toggle">
+            <i class="bi bi-moon fs-5"></i>
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle text-white" id="userDropdown" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle fs-5"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><h6 class="dropdown-header">Teacher Profile</h6></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>My Profile</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="../Pages/login.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="header-background">
+      <div class="header-content">
+        <h1>Welcome to Your Teacher Dashboard</h1>
+        <p>Manage your classroom with powerful teaching tools</p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid content-wrapper">
+      <!-- Quick Actions -->
+      <div class="quick-actions mb-5">
+        <div class="container">
+          <h2 class="section-title mb-4">Quick Actions</h2>
+          <div class="row g-3">
+            <div class="col-md-3">
+              <a href="attendance.html" class="quick-action-card">
+                <div class="icon-wrapper bg-primary">
+                  <i class="bi bi-calendar-check"></i>
+                </div>
+                <span>Take Attendance</span>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="grades.html" class="quick-action-card">
+                <div class="icon-wrapper bg-success">
+                  <i class="bi bi-journal-plus"></i>
+                </div>
+                <span>Record Grades</span>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="tasks.html" class="quick-action-card">
+                <div class="icon-wrapper bg-warning">
+                  <i class="bi bi-list-task"></i>
+                </div>
+                <span>Create Assignment</span>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="announcements.html" class="quick-action-card">
+                <div class="icon-wrapper bg-info">
+                  <i class="bi bi-megaphone"></i>
+                </div>
+                <span>Post Announcement</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Features -->
+      <div class="main-features mb-5">
+        <div class="container">
+          <h2 class="section-title mb-4">Teaching Tools</h2>
+          <div class="row g-4">
+            <!-- Feature Cards -->
+            <div class="col-md-4">
+              <div class="feature-card" data-link="students.html">
+                <div class="card-icon">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <h3>Student Management</h3>
+                <p>View and manage all your student records and profiles</p>
+                <div class="card-footer">
+                  <span class="badge bg-primary">32 Students</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="feature-card" data-link="attendance.html">
+                <div class="card-icon">
+                  <i class="bi bi-calendar-check"></i>
+                </div>
+                <h3>Attendance Tracker</h3>
+                <p>Record and monitor student attendance patterns</p>
+                <div class="card-footer">
+                  <span class="badge bg-success">94% Average</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="feature-card" data-link="grades.html">
+                <div class="card-icon">
+                  <i class="bi bi-journal-bookmark"></i>
+                </div>
+                <h3>Gradebook</h3>
+                <p>Enter, analyze, and manage student grades</p>
+                <div class="card-footer">
+                  <span class="badge bg-warning">5 Classes</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="feature-card" data-link="tasks.html">
+                <div class="card-icon">
+                  <i class="bi bi-list-task"></i>
+                </div>
+                <h3>Assignments</h3>
+                <p>Create and manage assignments for your classes</p>
+                <div class="card-footer">
+                  <span class="badge bg-info">3 Active</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="feature-card" data-link="reports.html">
+                <div class="card-icon">
+                  <i class="bi bi-file-earmark-bar-graph"></i>
+                </div>
+                <h3>Progress Reports</h3>
+                <p>Generate student progress reports and analytics</p>
+                <div class="card-footer">
+                  <span class="badge bg-danger">New</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="feature-card" data-link="communication.html">
+                <div class="card-icon">
+                  <i class="bi bi-chat-left-text"></i>
+                </div>
+                <h3>Communication</h3>
+                <p>Message students and parents with updates</p>
+                <div class="card-footer">
+                  <span class="badge bg-secondary">2 Unread</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="recent-activity mb-5">
+        <div class="container">
+          <h2 class="section-title mb-4">Recent Activity</h2>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="activity-card">
+                <div class="activity-header">
+                  <h3>Today's Schedule</h3>
+                  <a href="schedule.html" class="btn btn-sm btn-outline-primary">Full Schedule</a>
+                </div>
+                <ul class="schedule-list">
+                  <li>
+                    <div class="schedule-time">08:00 - 09:30</div>
+                    <div class="schedule-class">
+                      <strong>Mathematics</strong>
+                      <span>Grade 10A</span>
+                    </div>
+                    <div class="schedule-status">
+                      <span class="badge bg-success">Completed</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="schedule-time">10:00 - 11:30</div>
+                    <div class="schedule-class">
+                      <strong>Science</strong>
+                      <span>Grade 9B</span>
+                    </div>
+                    <div class="schedule-status">
+                      <span class="badge bg-warning">In Progress</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="schedule-time">13:00 - 14:30</div>
+                    <div class="schedule-class">
+                      <strong>History</strong>
+                      <span>Grade 10A</span>
+                    </div>
+                    <div class="schedule-status">
+                      <span class="badge bg-secondary">Upcoming</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="upcoming-card">
+                <div class="upcoming-header">
+                  <h3>Upcoming Assignments</h3>
+                  <span class="badge bg-primary">3 Due Soon</span>
+                </div>
+                <ul class="upcoming-list">
+                  <li>
+                    <div class="upcoming-class">Math 10A</div>
+                    <div class="upcoming-title">Algebra Quiz</div>
+                    <div class="upcoming-due">Due: Tomorrow</div>
+                  </li>
+                  <li>
+                    <div class="upcoming-class">Science 9B</div>
+                    <div class="upcoming-title">Lab Report</div>
+                    <div class="upcoming-due">Due: Friday</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Teacher Dashboard</h4>
+              <p>Powerful classroom management tools for educators to track and enhance student learning.</p>
+            </div>
+            <div class="col-md-4">
+              <h5>Teaching Resources</h5>
+              <ul class="footer-links">
+                <li><a href="#">Lesson Plans</a></li>
+                <li><a href="#">Grading Rubrics</a></li>
+                <li><a href="#">Curriculum Guides</a></li>
+                <li><a href="#">Professional Development</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5>Support</h5>
+              <ul class="footer-contact">
+                <li><i class="bi bi-envelope"></i> teachersupport@school.edu</li>
+                <li><i class="bi bi-telephone"></i> (123) 456-7890 (Ext. 2)</li>
+                <li><i class="bi bi-clock"></i> Mon-Fri: 8AM-4PM</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="social-icons">
+              <a href="#"><i class="bi bi-question-circle"></i> Help Center</a>
+              <a href="#"><i class="bi bi-book"></i> Documentation</a>
+            </div>
+            <p class="copyright">© 2025 Student Tracking System. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary rounded-circle">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/TeacherDashboard.js"></script>
+  </body>
+</html>

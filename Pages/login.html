@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login | Student Tracking System</title>
+  <link rel="icon" type="image/x-icon" href="../IMGs/favicon.ico" />
+  <!-- Keep existing meta tags and title -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/login.css" />
+</head>
+<body>
+  <!-- Floating Particles Background -->
+  <div class="particles" id="particles-js"></div>
+
+  <form class="login-form">
+    <div class="login-header">
+      <h1 class="text-center">LOGIN</h1>
+      <p class="text-center welcome-text">Welcome back! Please enter your credentials</p>
+    </div>
+    
+    <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
+    
+    <div class="role-selection mb-4 my-3">
+      <div class="role-options">
+        <label class="role-option-label">
+          <input type="radio" name="role" value="Admin" checked />
+          <span class="role-option-content">
+            <i class="bi bi-shield-lock"></i>
+            <span>ADMIN</span>
+          </span>
+        </label>
+        <label class="role-option-label">
+          <input type="radio" name="role" value="Teacher" />
+          <span class="role-option-content">
+            <i class="bi bi-person-video2"></i>
+            <span>TEACHER</span>
+          </span>
+        </label>
+        <label class="role-option-label">
+          <input type="radio" name="role" value="Student" />
+          <span class="role-option-content">
+            <i class="bi bi-mortarboard"></i>
+            <span>STUDENT</span>
+          </span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="mb-4">
+      <label for="username" class="form-label">Username</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-person"></i></span>
+        <input
+          type="text"
+          placeholder="Username"
+          class="form-control"
+          id="username"
+          aria-label="Username"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="password" class="form-label">Password</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+        <input
+          type="password"
+          placeholder="Password"
+          class="form-control"
+          id="password"
+          required
+        />
+        <span class="input-group-text toggle-password" id="togglePassword">
+          <i class="bi bi-eye-slash"></i>
+        </span>
+      </div>
+      <div class="password-strength mt-2">
+        <div class="progress" style="height: 4px;">
+          <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+        <small class="strength-text text-muted">Password Strength</small>
+      </div>
+    </div>
+
+    <div class="mb-4 d-flex justify-content-between align-items-center">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="rememberMe">
+        <label class="form-check-label" for="rememberMe">Remember me</label>
+      </div>
+      <div>
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2 mb-4">
+      <button type="submit" class="btn login-btn">
+        <span class="btn-text">Login</span>
+        <span class="btn-icon"><i class="bi bi-arrow-right"></i></span>
+      </button>
+    </div>
+  </form>
+
+  <!-- Add particles.js script -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../JS/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* Student Management Page Styles */
+.student-management-container {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .student-img-sm {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+  }
+  .action-btn {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .edit-btn {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success-color);
+  }
+  
+  .edit-btn:hover {
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger-color);
+  }
+  
+  .delete-btn:hover {
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .chart-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+  }
+  
+  /* Bulk Import Modal */
+  #importModal .modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+  }
+  
+  #importModal .modal-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  #importModal .modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropzone {
+    border: 2px dashed var(--accent-color);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: rgba(92, 122, 234, 0.05);
+  }
+  
+  .dropzone:hover {
+    background-color: rgba(92, 122, 234, 0.1);
+  }
+  
+  .dropzone.active {
+    border-color: var(--success-color);
+    background-color: rgba(40, 167, 69, 0.1);
+  }
+  
+  .template-download {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .template-download:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
